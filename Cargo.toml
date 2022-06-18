@@ -1,0 +1,16 @@
+[package]
+name = "calendars"
+version = "0.5.0"
+edition = "2021"
+build = "build.rs"
+
+[lib]
+crate-type = ["staticlib", "lib"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+[build-dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1.0"
