@@ -38,7 +38,7 @@ pub trait Calendar {
 // Date
 #[derive(Debug, Clone)]
 pub struct Date {
-    pub calendar: &'static str,
+    pub calendar: String,
     pub components: Vec<i64>,
     pub component_names: Vec<String>,
     pub month_names: Vec<String>,
@@ -60,7 +60,7 @@ impl Date {
         month_names: Vec<String>,
     ) -> Self {
         Self {
-            calendar,
+            calendar: calendar.to_string(),
             components,
             component_names,
             month_names,
@@ -70,7 +70,7 @@ impl Date {
     /// Convert Date to boxed Date-type (e.g. boxed Gregorian date)
     pub fn to_calendar_date(&self) -> Box<dyn Calendar> {
         let date = self.clone();
-        match self.calendar {
+        match self.calendar.as_str() {
             "gregorian" => Box::new(gregorian_from_date(date)),
             "iso" => Box::new(iso_from_date(date)),
             "julian" => Box::new(julian_from_date(date)),
