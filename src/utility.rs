@@ -44,7 +44,7 @@ pub struct Date {
     pub month_names: Vec<String>,
 }
 
-/// Implement fmt::Display trait for Date
+/// Implement fmt::Display trait for [`Date`]
 impl fmt::Display for Date {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         write!(f, "{}: {:?}", &self.calendar, &self.components)
@@ -67,7 +67,7 @@ impl Date {
         }
     }
 
-    /// Convert Date to boxed Date-type (e.g. boxed Gregorian date)
+    /// Convert [`Date`] to boxed Date-type (e.g. boxed Gregorian date)
     pub fn to_calendar_date(&self) -> Box<dyn Calendar> {
         let date = self.clone();
         match self.calendar.as_str() {
@@ -86,13 +86,26 @@ impl Date {
         }
     }
 
-    /// Convert Date to absolute (fixed) date
+    /// Convert [`Date`] to absolute (fixed) date
     pub fn to_absolute(&self) -> i64 {
         self.to_calendar_date().to_absolute()
     }
 
     /// Convert a given Date into a Date with the calendar representation
     /// specified in `calendar`.
+    ///
+    /// Currently supports the following calendars:
+    /// * `"gregorian"`
+    /// * `"iso"`
+    /// * `"julian"`
+    /// * `"islamic"`
+    /// * `"hebrew"`
+    /// * "`mayanLongCount`"
+    /// * "`mayanHaab`"
+    /// * "`mayanTzolkin`"
+    /// * "`french`"
+    /// * "`oldHinduSolar`"
+    /// * "`oldHinduLunar`"
     pub fn convert_to(&self, calendar: &str) -> Date {
         let date = self.to_absolute();
         match calendar {
@@ -111,7 +124,7 @@ impl Date {
         }
     }
 
-    /// Format date
+    /// Creates a date string from a [`Date`]
     pub fn format(&self) -> String {
         self.to_calendar_date().format()
     }

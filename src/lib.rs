@@ -13,7 +13,7 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-// Package libcalendar implements functions to compute and convert dates
+// Package calendars implements functions to compute and convert dates
 // from various calendars. These are the
 // Gregorian, ISO, Julian, Islamic, Hebrew, Mayan (long count, haab, tzolkin),
 // French Revolutionary, and Old Hindu (solar, lunar) calendars.
