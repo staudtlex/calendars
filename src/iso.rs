@@ -1,8 +1,9 @@
 //! Functions converting from and to ISO week calendar dates
 
-use crate::math::modulus;
-
-use super::gregorian::{absolute_from_gregorian, gregorian_from_absolute, Gregorian};
+use crate::{
+    gregorian::{absolute_from_gregorian, gregorian_from_absolute, Gregorian},
+    math::modulus,
+};
 
 /// Iso week date
 #[derive(Debug, Copy, Clone, PartialEq, Eq)]

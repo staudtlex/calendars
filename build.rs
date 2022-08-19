@@ -1,8 +1,6 @@
 //! Create tests
 use serde::Deserialize;
-use std::fs;
-use std::io::Write;
-use std::path::Path;
+use std::{fs, io::Write, path::Path};
 
 #[derive(Debug, Deserialize, Clone)]
 struct ReferenceDates {

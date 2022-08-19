@@ -1,8 +1,6 @@
 //! Functions converting from and to Gregorian calendar dates
 
-use crate::math::{floor_div, modulus};
-
-use super::math::sum;
+use crate::math::{floor_div, modulus, sum};
 
 /// Gregorian month names
 pub static GREGORIAN_MONTH_NAMES: [&str; 12] = [

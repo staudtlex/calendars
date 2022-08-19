@@ -2,19 +2,16 @@
 
 use crate::{
     french::{absolute_from_french, french_from_absolute, French, FRENCH_MONTH_NAMES},
-    hindu::{
-        absolute_from_old_hindu_lunar, absolute_from_old_hindu_solar,
-        old_hindu_lunar_from_absolute, old_hindu_solar_from_absolute, OldHinduLunar, OldHinduSolar,
-        HINDU_LUNAR_MONTH_NAMES, HINDU_SOLAR_MONTH_NAMES,
-    },
-};
-
-use super::{
     gregorian::{
         absolute_from_gregorian, gregorian_from_absolute, Gregorian, GREGORIAN_MONTH_NAMES,
     },
     hebrew::{
         absolute_from_hebrew, hebrew_from_absolute, hebrew_leap_year, Hebrew, HEBREW_MONTH_NAMES,
+    },
+    hindu::{
+        absolute_from_old_hindu_lunar, absolute_from_old_hindu_solar,
+        old_hindu_lunar_from_absolute, old_hindu_solar_from_absolute, OldHinduLunar, OldHinduSolar,
+        HINDU_LUNAR_MONTH_NAMES, HINDU_SOLAR_MONTH_NAMES,
     },
     islamic::{absolute_from_islamic, islamic_from_absolute, Islamic, ISLAMIC_MONTH_NAMES},
     iso::{absolute_from_iso, iso_from_absolute, Iso},

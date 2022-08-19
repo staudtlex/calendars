@@ -1,8 +1,6 @@
 //! Functions converting from and to Julian calendar dates
 
-use crate::math::{floor_div, modulus};
-
-use super::math::sum;
+use crate::math::{floor_div, modulus, sum};
 
 /// Julian date
 #[derive(Debug, Copy, Clone, PartialEq, Eq)]

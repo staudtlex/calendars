@@ -1,8 +1,6 @@
 //! Functions converting from and to Islamic calendar dates
 
-use crate::math::{floor_div, modulus};
-
-use super::math::sum;
+use crate::math::{floor_div, modulus, sum};
 
 /// Islamic month names
 pub static ISLAMIC_MONTH_NAMES: [&str; 12] = [

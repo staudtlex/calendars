@@ -1,8 +1,6 @@
 //! Functions converting from and to Hebrew calendar dates
 
-use crate::math::{floor_div, modulus};
-
-use super::math::sum;
+use crate::math::{floor_div, modulus, sum};
 
 /// Hebrew month names
 pub static HEBREW_MONTH_NAMES: [&str; 14] = [

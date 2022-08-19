@@ -1,8 +1,6 @@
 //! Provides functions to compute holiday dates
 
-use crate::math::{floor_div, modulus};
-
-use super::{
+use crate::{
     gregorian::{absolute_from_gregorian, last_day_of_gregorian_month, Gregorian},
     hebrew::{
         absolute_from_hebrew, hebrew_leap_year, last_month_of_hebrew_year, long_heshvan,
@@ -11,6 +9,7 @@ use super::{
     islamic::{absolute_from_islamic, islamic_from_absolute, Islamic},
     iso::kday_on_or_before,
     julian::{absolute_from_julian, julian_from_absolute, Julian},
+    math::{floor_div, modulus},
 };
 
 /// Computes the absolute (fixed) date of the nth kth day in a given month in
